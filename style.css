@@ -1,0 +1,262 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #fde2e4, #e0c3fc, #ffd6ff);
+  background-size: 300% 300%;
+  animation: gradientFlow 12s ease infinite;
+  margin: 0;
+  padding-bottom: 90px;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  max-width: 360px;
+  margin: 20px auto;
+  padding: 22px;
+  border-radius: 26px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  animation: breathe 6s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.015); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input, select, textarea {
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 6px;
+}
+
+button {
+  background: linear-gradient(to right, #ffafcc, #cdb4db);
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 15px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+}
+.moods {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.moods button {
+  font-size: 24px;
+  background: white;
+  border: none;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.moods button:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.moods button {
+  position: relative;
+}
+
+.moods button::after {
+  content: "✨";
+  position: absolute;
+  top: -6px;
+  right: -4px;
+  font-size: 10px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.moods button:hover::after {
+  opacity: 1;
+}
+
+
+.bottom-nav {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  border-radius: 30px;
+  animation: navSlide 0.8s ease;
+}
+
+@keyframes navSlide {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+
+.bottom-nav a {
+  text-decoration: none;
+  color: #555;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottom-nav a span {
+  font-size: 11px;
+}
+
+.bottom-nav a:hover {
+  color: #c77dff;
+  transform: scale(1.1);
+}
+
+
+/* Header polish */
+header h1 {
+  font-size: 26px;
+}
+
+header p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  text-align: center;
+}
+
+.day {
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.period-day {
+  background: #ffccd5;
+}
+
+.mood-icon {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.empty {
+  visibility: hidden;
+}
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  text-align: center;
+}
+
+.day {
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.period-day {
+  background: #ffccd5;
+}
+
+.mood-icon {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.empty {
+  visibility: hidden;
+}
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  text-align: center;
+}
+
+.day {
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.period-day {
+  background: #ffccd5;
+}
+
+.mood-icon {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.empty {
+  visibility: hidden;
+}
+
+button:active {
+  transform: scale(0.94);
+}
+
+.loading {
+  animation: pulse 1.5s infinite;
+  opacity: 0.6;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
