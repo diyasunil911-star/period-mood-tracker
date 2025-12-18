@@ -65,8 +65,22 @@ function loadInsights() {
       moodCount[a] > moodCount[b] ? a : b
     );
 
-    document.getElementById("moodSummary").innerText =
-      "Most common mood: " + mostCommonMood;
+    let insightText = "";
+
+if (mostCommonMood === "Happy") {
+  insightText = "🌸 You tend to feel emotionally balanced lately. Keep nurturing what makes you happy.";
+} else if (mostCommonMood === "Sad") {
+  insightText = "💗 You’ve had more low days recently. Gentle self-care and rest may help.";
+} else if (mostCommonMood === "Tired") {
+  insightText = "😴 Your data suggests fatigue. Make sure you’re getting enough rest.";
+} else if (mostCommonMood === "Angry") {
+  insightText = "🔥 Emotional intensity detected. Journaling or breathing exercises might help.";
+} else {
+  insightText = "🌿 Your moods appear fairly stable overall.";
+}
+
+document.getElementById("moodInsight").innerText = insightText;
+document.getElementById("moodSummary").classList.remove("loading");
   }
 
   // Period info
