@@ -1,3 +1,8 @@
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(120deg, #fde2e4, #e0c3fc, #ffd6ff);
@@ -31,6 +36,10 @@ header {
   border-radius: 26px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.12);
   animation: breathe 6s ease-in-out infinite;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @keyframes breathe {
@@ -44,12 +53,6 @@ header {
   100% { transform: translateY(0px); }
 }
 
-/* Center form elements inside cards */
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 /* Make inputs nicely centered */
 .card label {
@@ -70,11 +73,15 @@ header {
   width: 160px;
 }
 
-
 label {
   display: block;
   margin-top: 10px;
+  width: 100%;
+  max-width: 280px;
+  text-align: left;
 }
+
+
 
 input, select, textarea {
   border-radius: 12px;
@@ -83,15 +90,24 @@ input, select, textarea {
   margin-top: 6px;
 }
 
+input, textarea {
+  width: 100%;
+  max-width: 280px;
+}
+
+
 button {
   background: linear-gradient(to right, #ffafcc, #cdb4db);
   border: none;
   border-radius: 20px;
   padding: 10px;
   font-size: 15px;
-  margin-top: 15px;
+  margin-top: 18px;
   cursor: pointer;
   transition: transform 0.2s ease;
+
+  width: 180px;
+  align-self: center;
 }
 
 button:hover {
@@ -105,8 +121,10 @@ footer {
 }
 .moods {
   display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
 }
 
 .moods button {
@@ -119,6 +137,12 @@ footer {
 
 .moods button:hover {
   transform: scale(1.2) rotate(5deg);
+}
+
+.moods button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
 }
 
 .moods button {
@@ -179,7 +203,6 @@ footer {
   transform: scale(1.1);
 }
 
-
 /* Header polish */
 header h1 {
   font-size: 26px;
@@ -195,6 +218,7 @@ header p {
   grid-template-columns: repeat(7, 1fr);
   gap: 6px;
   text-align: center;
+
 }
 
 .day {
@@ -217,12 +241,6 @@ header p {
 .empty {
   visibility: hidden;
 }
-.calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 6px;
-  text-align: center;
-}
 
 .day {
   padding: 10px;
@@ -243,12 +261,6 @@ header p {
 
 .empty {
   visibility: hidden;
-}
-.calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 6px;
-  text-align: center;
 }
 
 .day {
@@ -293,4 +305,7 @@ button:active {
   text-align: center;
   opacity: 0.85;
 }
+
+
+
 
